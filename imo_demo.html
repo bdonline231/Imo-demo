@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>imo Login Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+    .login-box {
+      background: #161b22;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 2px solid #00aaff;
+    }
+    .name {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #00aaff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #0088cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <img src="profile.jpg" alt="Profile" class="profile-pic">
+    <div class="name">Rubel Iniel</div>
+    <input type="text" placeholder="Phone or imo ID"><br>
+    <input type="password" placeholder="Password"><br>
+    <button class="btn" onclick="success()">Login</button>
+  </div>
+
+  <script>
+    function success(){
+      document.body.innerHTML = `
+        <div style="text-align:center; color:white;">
+          <h2>Welcome, Rubel Iniel</h2>
+          <img src="profile.jpg" style="width:120px; height:120px; border-radius:50%; margin:20px; border:2px solid #00aaff;">
+          <p style="font-size:18px;">Login Successful (Demo)</p>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
